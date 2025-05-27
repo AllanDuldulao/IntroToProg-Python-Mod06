@@ -73,6 +73,7 @@ class FileProcessor:
          ChangeLog: (Who, When, What)
     ADuldulao, 5/24/2025, Created Function
         """
+        file = None
         try:
             file = open(file_name, "w")
             json.dump(student_data, file, indent=1)  # Added the indent so that my datas are easily readable.
@@ -87,7 +88,7 @@ class FileProcessor:
         except Exception as e:
             IO.output_error_messages("\nThere was a non-specific error!\n", e)
         finally:
-            if file.closed == False:
+            if file is not None and not file.closed:
                 file.close()
 #---Presentation----------------------------------------------------------------------------------------------#
 class IO:
