@@ -98,7 +98,7 @@ class IO:
     ChangeLog:(Who, When, What)
     ADuldulao, 5/24/2025, Created Clas
     """
-    pass
+    
     @staticmethod
     def output_error_messages(message: str, error: Exception = None):
         """
